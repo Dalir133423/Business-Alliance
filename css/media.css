@@ -1141,7 +1141,7 @@
     }
 
     .home-interesting-item {
-        height: 380px;
+        height: auto;
     }
 
     .home-interesting-row-slider .col-4 button {
