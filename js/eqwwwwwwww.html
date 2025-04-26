@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .burger {
+  /* как раньше */
+  position: relative;
+  z-index: 2;
+  width: 40px;
+  height: 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.burger::before,
+.burger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #fff;
+  transition: .3s;
+}
+.burger::before {
+  top: 0;
+  box-shadow: 0 11px 0 #fff;
+}
+.burger::after {
+  bottom: 0;
+}
+.burger.active::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0,0,0,0);
+}
+.burger.active::after {
+  bottom: 11px;
+  transform: rotate(-45deg);
+}
+
+.menu-list {
+  position: absolute;
+  top: -25px;
+  right: -50px;
+  display: grid;
+  gap: 12px;
+  padding: 60px 0 40px;
+  width: 200px;
+  background: rgba(55,3,69,.83);
+  border-radius: 10px;
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 1;
+}
+.menu-list.active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+  </style>
+</head>
+<body>
+  <div class="menu menu-2">
+    <button class="burger" aria-label="Открыть меню"></button>
+    <ul class="menu-list">
+      <li><a href="./basket.html" class="menu-item">Кабинет</a></li>
+      <li><a href="./profile.html" class="menu-item">Профиль</a></li>
+      <li><a href="./transition.html" class="menu-item">Транзакции</a></li>
+      <li><a href="./conclusion.html" class="menu-item">Вывод средств</a></li>
+      <li><a href="./comand.html" class="menu-item">Команда</a></li>
+      <li><a href="./instructions.html" class="menu-item">Инструкции</a></li>
+      <li><a href="./index.html" class="menu-item">Главная</a></li>
+    </ul>
+  </div>
+  <script>const burger = document.querySelector('.burger');
+    const menu = document.querySelector('.menu-list');
+    const links = document.querySelectorAll('.menu-item');
+    
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+    
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        menu.classList.remove('active');
+      });
+    });
+    </script>
+</body>
+</html>

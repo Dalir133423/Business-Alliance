@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/fonts.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/media.css">
-    <link rel="icon" href="./img/">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+      
+        <link rel="stylesheet" href="./css/fonts.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/media.css">
+        <link rel="stylesheet" href="./css/slider.css">
+        <link rel="icon" href="./img/">
+      
+        <!-- Slick CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <!-- Стили Lightbox -->
+        <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+
+    <!-- Slick JS -->
+      </head>
+      
 <body>
-    <div class="bg">
+    <div class="bg bg-slide-1">
         <header class="header">
             <div class="container">
+                <div class="header-logo-mb">
+                    <a href=""><img src="./img/logo.svg" alt=""></a>
+                </div>
                 <nav class="header-nav">
                     <a href="">Преимущества</a>
                     <a href="">О компании</a>
@@ -22,6 +38,34 @@
                     <a href="">FAQ</a>
                     <a href="">Контакты</a>
                 </nav>
+                <div class="header-contact-mb">
+                    <button class="burger" aria-label="Открыть меню"></button>
+                    <ul class="menu-list">
+                        <li class="menu-item menu-item-mb">
+                            <a href="">Преимущества</a>
+                        </li>
+                        <li class="menu-item menu-item-mb">
+                            <a href="">О компании</a>
+                        </li>
+                        <li class="menu-item menu-item-mb">
+                            <a href="">Партнеры</a>
+                        </li>
+                        <li class="menu-item menu-item-mb">
+                            <a href="">Рассчет стоимости</a>
+                        </li>
+                        <li class="menu-item menu-item-mb">
+                            <a href="">Отзывы</a>
+                        </li>
+                        <li class="menu-item menu-item-mb">
+                            <a href="">FAQ</a>
+                        </li>
+                        <li class="menu-item menu-item-mb">
+                            <a href="">Контакты</a>
+                        </li>
+                        <li class="menu-item"><a href="tel:+79198376624"><img src="./img/header-telefon.svg" alt="">+7 919 837-66-24</a></li>
+                        <li class="menu-item"><button class="heder-button">Заказать звонок</button></li>
+                    </ul>
+                </div>
                 <div class="header-telefon">
                     <a href="tel:+79198376624"><img src="./img/header-telefon.svg" alt="">+7 919 837-66-24</a>                    
                 </div>
@@ -29,15 +73,44 @@
             </div>
         </header>
         <div class="home-info">
-            <div class="container">
-                <div class="home-info-row">
-                    <div class="home-info-text col-65-header">
+            <div class="container" style="position: relative;">
+                <div class="home-info-row active justify-content-center-lg" data-slide="0">
+                    <div class="home-info-text col-65-header col-lg-8 col-md-12">
                         <h1>Я <span>Юлия Красникова</span> являюсь экспертом в области госзаказа с <span>опытом работы более 10 лет</span></h1>
                         <span class="home-info-text-span">Бесплатно проконсультирую Вас<br>и помогу решить любой вопрос!</span>
                         <button>Оставить заявку</button>
                     </div>
-                    <div class="home-info-img">
-                        <img src="./img/her-znaet-kto.png" alt="">
+                    <div class="home-info-img col-lg-4">
+                        <img src="./img/her-znaet-kto.png" alt="" class="info-img-mb-none">
+                    </div>
+                </div>
+                <div class="home-info-row home-info-row-2 justify-content-center-lg" data-slide="1">
+                    <div class="home-info-text-2 col col-6 col-xl-7 col-lg-6 col-md-12">
+                        <h1>Банковская гарантия участникам<br> закупок 44-Ф3, 223-Ф3, 615-ПП.<br> Коммерческие гарантии.<br> Независимые гарантии</h1>
+                        <ul>
+                            <li>Сумма гарантии - до 500 млн.руб</li>
+                            <li>Срок гарантии до 7 лет</li>
+                            <li>Оформление онлайн с использование ЭДО</li>
+                            <li>Без посещения офиса банка</li>
+                        </ul>
+                        <button>Оставить заявку</button>
+                    </div>
+                    <div class="home-info-img-2 col col-6 col-xl-5 col-lg-4">
+                        <img src="./img/white-img.png" alt="" class="img-white info-img-mb-none">
+                    </div>
+                </div>
+                <div class="dotes">
+                    <div class="dotes-button" data-slide-dot="0">
+                      <div class="circle"></div>
+                      <svg class="progress-ring" width="24" height="24">
+                        <circle class="progress-ring-circle" stroke="#007BFF" stroke-width="2" fill="transparent" r="10" cx="12" cy="12"/>
+                      </svg>
+                    </div>
+                    <div class="dotes-button" data-slide-dot="1">
+                      <div class="circle"></div>
+                      <svg class="progress-ring" width="24" height="24">
+                        <circle class="progress-ring-circle" stroke="#007BFF" stroke-width="2" fill="transparent" r="10" cx="12" cy="12"/>
+                      </svg>
                     </div>
                 </div>
             </div>
@@ -53,29 +126,61 @@
                     <p>Минимальный пакет документов для оформления банковсокй гарантии</p>
                 </div>
                 <div class="col col-3_5">
-                    <img src="img/advantages-icon-1.svg" alt="">
-                    <b>Удобно</b>
-                    <p>Минимальный пакет документов для оформления банковсокй гарантии</p>
+                    <img src="img/vigodno.svg" alt="">
+                    <b>Выгодно</b>
+                    <p>Стоимость банковской<br> гарантии от 1.5% годовых</p>
+                </div>
+                <div class="col col-3_5">
+                    <img src="img/nadejno.svg" alt="">
+                    <b>Надёжно</b>
+                    <p>Только проверенные<br> банки из ТОП 20</p>
+                </div>
+                <div class="col col-3_5">
+                    <img src="img/Frame 221111111.svg" alt="">
+                    <b>Вероятность <br>одобрения выше</b>
+                    <p>Успешный опыт решения <br>сложных кейсов</p>
+                </div>
+                <div class="col col-3_5">
+                    <img src="img/fast.svg" alt="">
+                    <b>Оформление<br> быстрее</b>
+                    <p>Одобрение за 1 час, а выпуск<br> банковской гарантии 3 часа</p>
                 </div>
                 <div class="col col-3_5">
                     <img src="img/advantages-icon-1.svg" alt="">
-                    <b>Удобно</b>
-                    <p>Минимальный пакет документов для оформления банковсокй гарантии</p>
+                    <b>Доставка<br>
+                        по всей Стране</b>
+                    <p>Отправка оригинала банковской<br> гарантии в любой регион России</p>
                 </div>
-                <div class="col col-3_5">
-                    <img src="img/advantages-icon-1.svg" alt="">
-                    <b>Удобно</b>
-                    <p>Минимальный пакет документов для оформления банковсокй гарантии</p>
+            </div>
+        </div>
+    </div>
+    <div class="home-advantages-mb">
+        <div class="container">
+            <h4><span>Преимущество</span> компании Бизнес-Альянс <span>выгода для клиента</span></h4>
+            <div class="row home-advantages-mb-row">
+                <div class="col col-12 col-md-10 col-sm-12">
+                    <img src="./img/advantages-icon-1.svg" alt="">
+                    <b>Удобно<span>Минимальный пакет документов <br>для оформления банковсокй гарантии</span></b>
                 </div>
-                <div class="col col-3_5">
-                    <img src="img/advantages-icon-1.svg" alt="">
-                    <b>Удобно</b>
-                    <p>Минимальный пакет документов для оформления банковсокй гарантии</p>
+                <div class="col col-md-10 col-sm-12">
+                    <img src="./img/vigodno.svg" alt="">
+                    <b>Выгодно<span>Стоимость банковской <br>гарантии от 1.5% годовых</span></b>
                 </div>
-                <div class="col col-3_5">
-                    <img src="img/advantages-icon-1.svg" alt="">
-                    <b>Удобно</b>
-                    <p>Минимальный пакет документов для оформления банковсокй гарантии</p>
+                <div class="col col-md-10 col-sm-12">
+                    <img src="./img/nadejno.svg" alt="">
+                    <b>Надёжно<span>Только проверенные <br>банки из ТОП 20</span></b>
+                </div>
+                <div class="col col-md-10 col-sm-12">
+                    <img src="./img/Frame 221111111.svg" alt="">
+                    <b>Вероятность одобрения выше<span>Успешный опыт решения<br> сложных кейсов</span></b>
+                </div>
+                <div class="col col-md-10 col-sm-12">
+                    <img src="./img/fast.svg" alt="">
+                    <b>Оформление быстрее<span>Одобрение за 1 час, а выпуск <br>банковской гарантии 3 часа</span></b>
+                </div>
+                <div class="col col-md-10 col-sm-12">
+                    <img src="./img/advantages-icon-1.svg" alt="">
+                    <b>Доставка по всей Стране<span>Отправка оригинала банковской <br>гарантии в любой регион России</span></b>
                 </div>
             </div>
         </div>
@@ -83,10 +188,11 @@
     <div class="home-garant">
         <div class="container">
             <div class="row home-garant-row">
-                <div class="col col-3">
+                <div class="col col-3 home-garant-row-img col-sm-12">
                     <img src="img/her-znaet-kto-2.png" alt="" class="garant-img">
+                    <img src="img/shadof.png" alt="" class="shadof">
                 </div>
-                <div class="col col-5">
+                <div class="col col-5 col-xl-6 col-md-6 col-sm-12">
                     <div class="home-garant-midlle-text">
                         <h4>Получите банковскую гаранти сегодня</h4>
                         <p>Позвоните или напишите исползуя, <br>любой удобный для вас мессеннджер</p>
@@ -97,12 +203,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col col-4">
-                    <div class="form-garant">
+                <div class="col col-4 col-xl-6 col-md-6 col-sm-12">
+                    <div class="form-garant ">
                         <span>Или заполните форму и первый свободный специалист свяжется с Вами</span>
-                        <input type="text" placeholder="Серге I" class="form-garant-input-user"> 
-                        <input type="tel" placeholder="Ваш телефон" class="form-garant-input-password">
-                        <button>Оставить заявку</button>
+                        <input type="text" placeholder="Серге I" class="form-garant-input form-garant-input-user"> 
+                        <input type="tel" placeholder="Ваш телефон" class="form-garant-input form-garant-input-password">
+                        <button class="form-garant-button">Оставить заявку</button>
                     </div>
                 </div>
             </div>
@@ -117,45 +223,45 @@
             </p>
             <div class="home-partners-column">
                 <div class="row">
-                    <div class="col col-3">
-                        <a href=""><img src="./img/logo-sber.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/logo-sber.svg" alt=""></a>
                     </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/vtb-bank.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/vtb-bank.svg" alt=""></a>
                     </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/gazprom.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/gazprom.svg" alt=""></a>
                     </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/moskow-credit.svg" alt=""></a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-3">
-                        <a href=""><img src="./img/absolut-bank.svg" alt=""></a>
-                    </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/mts-bank.svg" alt=""></a>
-                    </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/standart.svg" alt=""></a>
-                    </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/ros-bank.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/moskow-credit.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col col-3">
-                        <a href=""><img src="./img/cosmo-bank.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/absolut-bank.svg" alt=""></a>
                     </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/open-bank.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/mts-bank.svg" alt=""></a>
                     </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/promsvyazbank.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/standart.svg" alt=""></a>
                     </div>
-                    <div class="col col-3">
-                        <a href=""><img src="./img/ural-city.svg" alt=""></a>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/ros-bank.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/cosmo-bank.svg" alt=""></a>
+                    </div>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/open-bank.svg" alt=""></a>
+                    </div>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/promsvyazbank.svg" alt=""></a>
+                    </div>
+                    <div class="col col-3 col-lg-4 col-md-6">
+                        <a href="http://www.sberbank.ru/ru/person"><img src="./img/ural-city.svg" alt=""></a>
                     </div>
                 </div>
                 <div class="row home-partners-row-footer">
@@ -166,43 +272,436 @@
     </div>
     <div class="home-interesting">
         <div class="container">
-            <div class="row home-interesting-header ">
+            <div class="row home-interesting-header">
                 <div class="col col-7">
                     <h5>Вас может<br><span>заинтересовать</span></h5>
                 </div>
                 <div class="col col-5">
-                    <button><img src="./img/slider.png" alt=""></button>
-                    <button><img src="./img/slider.png" alt="" style="transform: rotate(-180deg);"></button>
+                    <button class="slick-prev"><img src="./img/slider.png" alt="" class="slider-img-arrow"></button>
+                    <button class="slick-next"><img src="./img/slider.png" alt="" style="transform: rotate(-180deg);" class="slider-img-arrow"></button>
                 </div>
             </div>
-            <div class="row home-interesting-row-slider justify-content-between">
-                <div class="col col-4">
+            <div class="row home-interesting-row-slider justify-content-between slider">
+                <div class="col col-4 slider__item">
                     <div class="home-interesting-item">
-                        <img src="./img/s1.png" alt="">
+                        <img src="./img/s1-test.svg" alt="" class="home-interesting-item-img-hover">
+                        <img src="./img/11.png" alt="" class="home-interesting-item-img">
                         <span>Заем для бизнеса</span>
                         <p>Тендерный заём на обеспечение<br> заявки для участия в тендере</p>
                         <button>Подробнее</button>
                     </div>
                 </div>
-                <div class="col col-4">
+                <div class="col col-4 slider__item">
                     <div class="home-interesting-item">
-                        <img src="./img/s1.png" alt="">
+                        <img src="./img/s1-test.svg" alt="" class="home-interesting-item-img-hover">
+                        <img src="./img/11.png" alt="" class="home-interesting-item-img">
                         <span>Заем для бизнеса</span>
                         <p>Тендерный заём на обеспечение<br> заявки для участия в тендере</p>
                         <button>Подробнее</button>
                     </div>
                 </div>
-                <div class="col col-4">
+                <div class="col col-4 slider__item">
                     <div class="home-interesting-item">
-                        <img src="./img/s1.png" alt="">
+                        <img src="./img/s1-test.svg" alt="" class="home-interesting-item-img-hover">
+                        <img src="./img/11.png" alt="" class="home-interesting-item-img">
                         <span>Заем для бизнеса</span>
                         <p>Тендерный заём на обеспечение<br> заявки для участия в тендере</p>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+                <div class="col col-4 slider__item">
+                    <div class="home-interesting-item ">
+                        <img src="./img/s1-test.svg" alt="" class="home-interesting-item-img-hover">
+                        <img src="./img/11.png" alt="" class="home-interesting-item-img">
+                        <span>Кредит для бизнеса</span>
+                        <p>На пополнение<br> оборотных средств</p>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+                <div class="col col-4 slider__item">
+                    <div class="home-interesting-item ">
+                        <img src="./img/s1-test.svg" alt="" class="home-interesting-item-img-hover">
+                        <img src="./img/11.png" alt="" class="home-interesting-item-img">    
+                        <span>Тендерное сопровождение</span>
+                        <p class="slider__item-p-2">Поиск тендеров<br> Подача заявки на участие<br> Коммуникация с заказчиком<br>Жалобы в ФАС</p>
                         <button>Подробнее</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="home-info_project">
+        <div class="container">
+            <h5><span>О проекте</span>Бизнес-Альянс</h5>
+            <div class="row home-info_project-row align-items-start home-info_project-row-1">
+                <div class="col col-3 col-lg-4 home-info_project-img-2 col-md-10">
+                    <img src="./img/her-znaet-kto-ava.png" alt="" class="home-info_project-img">
+                </div> 
+                <div class="col col-5 home-info_project-text col-lg-12 col-md-12">
+                    <button>Основатель компании</button>
+                    <b>Красникова Юлия</b>
+                    <p>Вместе подберем решение практически для любого клиента и в любой ситуации, в том числе если Ваша фирма не идеальна.</p>
+                    <div class="home-info-project-item-footer">
+                        <a href="">Заказать звонок</a>
+                        <a href="">+7 919 837-66-24</a>
+                    </div>
+                </div>
+                <div class="col col-4 home-info_project-social-column col-lg-8 col-md-10 col-sm-12">
+                    <span>410056, Саратовская область, г. Саратов, ул. им. Вавилова Н. И., д. 8/26А </span>
+                    <div class="home-info_project-sochial-icon-row">
+                        <a href=""><img src="./img/icon-1.svg" alt="" class="home-info_project-sochial-icon"><img src="./img/icon-1_hover.svg" alt="" class="home-info_project-sochial-icon-hover"></a>
+                        <a href=""><img src="./img/icon-2.svg" alt="" class="home-info_project-sochial-icon"><img src="./img/icon-2_hover.svg" alt="" class="home-info_project-sochial-icon-hover"></a>
+                        <a href=""><img src="./img/icon-3.svg" alt="" class="home-info_project-sochial-icon"><img src="./img/icon-3_hover.svg" alt="" class="home-info_project-sochial-icon-hover"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row home-info_project-row align-items-start">
+                <div class="col col-3 col-lg-4 home-info_project-img-2 col-md-10">
+                    <img src="./img/user-11111111111111111.png" alt="" class="home-info_project-img">
+                </div> 
+                <div class="col col-5 home-info_project-text col-lg-12">
+                    <button>Директор по маркетингу</button>
+                    <b>Пономаренко Максим</b>
+                    <p>Предлагаем клиентам синергийный эффект от коммуникации с надежными банками через искушенных экспертов.</p>
+                    <div class="home-info-project-item-footer">
+                        <a href="">Заказать звонок</a>
+                        <a href="">+7 919 837-66-24</a>
+                    </div>
+                </div>
+                <div class="col col-4 home-info_project-social-column col-lg-8 col-md-10 col-sm-12">
+                    <span>410056, Саратовская область, г. Саратов, ул. им. Вавилова Н. И., д. 8/26А </span>
+                    <div class="home-info_project-sochial-icon-row">
+                        <a href=""><img src="./img/icon-1.svg" alt="" class="home-info_project-sochial-icon"><img src="./img/icon-1_hover.svg" alt="" class="home-info_project-sochial-icon-hover"></a>
+                        <a href=""><img src="./img/icon-2.svg" alt="" class="home-info_project-sochial-icon"><img src="./img/icon-2_hover.svg" alt="" class="home-info_project-sochial-icon-hover"></a>
+                        <a href=""><img src="./img/icon-3.svg" alt="" class="home-info_project-sochial-icon"><img src="./img/icon-3_hover.svg" alt="" class="home-info_project-sochial-icon-hover"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-bid">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col col-7 home-bid-text col-xl-6 col-lg-8 col-md-12">
+                    <h6>Оставьте<span>заявку на сайте </span></h6>
+                    <b>И получите скидку на 3 первых оформленных<br> гарантии либо кешбэк на карту</b>
+                </div>
+                <div class="col col-5 home-bid-slider col-xl-6 col-lg-8 col-md-11">
+                    <div class="bid-slider">
+                        <div class="bid-slider-item" data-slide="1">
+                            <div class="home-bid-slider-header">
+                                <span>Укажите вид <br>банковской гарантии</span>
+                                <b><span>01</span>/05</b>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 20%;"></div>
+                            </div>
+                            <div class="custom-select imageSelect">
+                                <div class="selected">
+                                    <span>Гарантия для 44ФЗ</span>
+                                    <img class="arrow-icon" src="./img/aroow-botton.svg" alt="">
+                                </div>
+                                <div class="options">
+                                    <div class="option" data-value="2"><span>Гарантия для 44ФЗ</span></div>
+                                    <div class="option" data-value="3"><span>Гарантия для 223ФЗ</span></div>
+                                </div>
+                            </div>
+                            <a href="#" class="home-bid-a">+ Независимая гарантия</a>
+                            <p>Если вы затрудняетесь с выбором подходящего ответа, просто <br>перейдите к следующему шагу. Чем больше ответов вы сможете<br> дать, тем более точный расчет мы сможем предоставить.</p>
+                        </div>
+                        <div class="bid-slider-item" data-slide="2">
+                            <div class="home-bid-slider-header">
+                                <span>Укажите вид банковской гарантии</span>
+                                <b><span>01</span>/05</b>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill"  style="width: 40%;"></div>
+                            </div>
+                            <div class="custom-select imageSelect">
+                                <div class="selected">
+                                    <span>Гарантия для 44ФЗ</span>
+                                    <img class="arrow-icon" src="./img/aroow-botton.svg" alt="">
+                                </div>
+                                <div class="options">
+                                    <div class="option" data-value="2"><span>Гарантия для 44ФЗ</span></div>
+                                    <div class="option" data-value="3"><span>Гарантия для 223ФЗ</span></div>
+                                </div>
+                            </div>
+                            <a href="#" class="home-bid-a">+ Независимая гарантия</a>
+                            <p>Если вы затрудняетесь с выбором подходящего ответа, просто <br>перейдите к следующему шагу. Чем больше ответов вы сможете<br> дать, тем более точный расчет мы сможем предоставить.</p>
+                        </div>
+                        <div class="bid-slider-item" data-slide="3">
+                            <div class="home-bid-slider-header">
+                                <span>Укажите вид банковской гарантии</span>
+                                <b><span>01</span>/05</b>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%;"></div>
+                            </div>
+                            <div class="custom-select imageSelect">
+                                <div class="selected">
+                                    <span>Гарантия для 44ФЗ</span>
+                                    <img class="arrow-icon" src="./img/aroow-botton.svg" alt="">
+                                </div>
+                                <div class="options">
+                                    <div class="option" data-value="2"><span>Гарантия для 44ФЗ</span></div>
+                                    <div class="option" data-value="3"><span>Гарантия для 223ФЗ</span></div>
+                                </div>
+                            </div>  
+                            <a href="#" class="home-bid-a">+ Независимая гарантия</a>
+                            <p>Если вы затрудняетесь с выбором подходящего ответа, просто <br>перейдите к следующему шагу. Чем больше ответов вы сможете<br> дать, тем более точный расчет мы сможем предоставить.</p>
+                        </div>
+                        <div class="bid-slider-item" data-slide="4">
+                            <div class="home-bid-slider-header">
+                                <span>Укажите вид банковской гарантии</span>
+                                <b><span>01</span>/05</b>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%;"></div>
+                            </div>
+                            <div class="custom-select imageSelect">
+                                <div class="selected">
+                                    <span>Гарантия для 44ФЗ</span>
+                                    <img class="arrow-icon" src="./img/aroow-botton.svg" alt="">
+                                </div>
+                                <div class="options">
+                                    <div class="option" data-value="2"><span>Гарантия для 44ФЗ</span></div>
+                                    <div class="option" data-value="3"><span>Гарантия для 223ФЗ</span></div>
+                                </div>
+                            </div>  
+                            <a href="#" class="home-bid-a">+ Независимая гарантия</a>
+                            <p>Если вы затрудняетесь с выбором подходящего ответа, просто <br>перейдите к следующему шагу. Чем больше ответов вы сможете<br> дать, тем более точный расчет мы сможем предоставить.</p>
+                        </div>
+                        <div class="bid-slider-item" data-slide="5">
+                            <div class="home-bid-slider-header">
+                                <span>Укажите вид банковской гарантии</span>
+                                <b><span>01</span>/05</b>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <div class="custom-select imageSelect">
+                                <div class="selected">
+                                    <span>Гарантия для 44ФЗ</span>
+                                    <img class="arrow-icon" src="./img/aroow-botton.svg" alt="">
+                                </div>
+                                <div class="options">
+                                    <div class="option" data-value="2"><span>Гарантия для 44ФЗ</span></div>
+                                    <div class="option" data-value="3"><span>Гарантия для 223ФЗ</span></div>
+                                </div>
+                            </div>  
+                            <a href="#" class="home-bid-a">+ Независимая гарантия</a>
+                            <p>Если вы затрудняетесь с выбором подходящего ответа, просто <br>перейдите к следующему шагу. Чем больше ответов вы сможете<br> дать, тем более точный расчет мы сможем предоставить.</p>
+                        </div>
+                    </div>
+                    <div class="home-bid-footer">
+                        <button class="bid-slider-prev" id="bid-slider-prev">Назад</button>
+                        <button class="bid-slider-next" id="bid-slider-next">Далее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-reviews">
+        <div class="container">
+            <div class="row home-interesting-header">
+                <div class="col col-7">
+                    <h5>Вас может<br><span>заинтересовать</span></h5>
+                </div>
+                <div class="col col-5">
+                    <button class="slick-prev-2"><img src="./img/slider.png" alt=""></button>
+                    <button class="slick-next-2"><img src="./img/slider.png" alt="" style="transform: rotate(-180deg);"></button>
+                </div>
+            </div>             
+            <div class="row home-reviews-row slider-2">
+                <div class="slider__item">
+                    <a href="./img/letter-1.png" data-lightbox="docs">
+                        <img src="./img/letter-1.png" alt="" class="letter-1">
+                    </a>
+                </div>
+                <div class="slider__item">
+                    <a href="./img/leteeeeeeeer.svg" data-lightbox="docs">
+                        <img src="./img/leteeeeeeeer.svg" alt="" class="letter-1">
+                    </a>                
+                </div>
+                <div class="slider__item">
+                    <a href="./img/leteeeeeeeer.svg" data-lightbox="docs">
+                        <img src="./img/leteeeeeeeer.svg" alt="" class="letter-1">
+                    </a>                
+                </div>
+                <div class="slider__item">
+                    <a href="./img/leteeeeeeeer.svg" data-lightbox="docs">
+                        <img src="./img/leteeeeeeeer.svg" alt="" class="letter-1">
+                    </a>                
+                </div>
+                <div class="slider__item">
+                    <a href="./img/leteeeeeeeer.svg" data-lightbox="docs">
+                        <img src="./img/leteeeeeeeer.svg" alt="" class="letter-1">
+                    </a>                
+                </div>
+                <div class="slider__item">
+                    <a href="./img/leeleteeeeeeeer.svgg" data-lightbox="docs">
+                        <img src="./img/leteeeeeeeer.svg" alt="" class="letter-1">
+                    </a>                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-question">
+        <div class="container">
+            <h6>Вопрос - <span>ответ</span></h6>
+            <div class="row home-question-row">
+                <div class="col col-6 faq-col col-lg-12">
+                    <div class="faq">
+                        <div class="question">
+                            <span>
+                                Нам срочно необходима банковская гарантия.<br>
+                                Как быстро можно ее оформить?
+                            </span>
+                            <button class="question-open"><img src="./img/plus-img.svg" alt=""></button>
+                        </div>
+                        <div class="answer open">
+                            <p>Оформление банковской гарантии занимает один рабочий день, при <br>условии оперативного предоставления необходимых документов и<br> заполения заявки.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <span>
+                                С какими регионами работает ваша компания?
+                            </span>
+                            <button class="question-open"><img src="./img/plus-img.svg" alt=""></button>
+                        </div>
+                        <div class="answer">
+                            <p>Оформление банковской гарантии занимает один рабочий день, при <br>условии оперативного предоставления необходимых документов и<br> заполения заявки.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <span>
+                                Банковские гарантии предоставляются только в электронном <br>
+                                виде или можно оформить в бумажном варианте?
+                            </span>
+                            <button class="question-open"><img src="./img/plus-img.svg" alt=""></button>
+                        </div>
+                        <div class="answer">
+                            <p>Оформление банковской гарантии занимает один рабочий день, при <br>условии оперативного предоставления необходимых документов и<br> заполения заявки.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-6 faq-col col-lg-12">
+                    <div class="faq">
+                        <div class="question">
+                            <span>
+                                Нам срочно необходима банковская гарантия.<br> Как быстро можно ее оформить?
+                            </span>
+                            <button class="question-open"><img src="./img/plus-img.svg" alt=""></button>
+                        </div>
+                        <div class="answer open">
+                            <p>Оформление банковской гарантии занимает один рабочий день, при <br>условии оперативного предоставления необходимых документов и<br> заполения заявки.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <span>
+                                С какими регионами работает ваша компания?
+                            </span>
+                            <button class="question-open"><img src="./img/plus-img.svg" alt=""></button>
+                        </div>
+                        <div class="answer">
+                            <p>Оформление банковской гарантии занимает один рабочий день, при <br>условии оперативного предоставления необходимых документов и<br> заполения заявки.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <div class="question">
+                            <span>
+                                Банковские гарантии предоставляются только в электронном<br> виде или можно оформить в бумажном варианте?
+                            </span>
+                            <button class="question-open"><img src="./img/minus-img.svg" alt=""></button>
+                        </div>
+                        <div class="answer">
+                            <p>Оформление банковской гарантии занимает один рабочий день, при <br>условии оперативного предоставления необходимых документов и<br> заполения заявки.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <footer class="footer">
+        <div class="container">
+            <h6>Контакты</h6>
+            <div class="row footer-row">
+                <div class="col col-4 col-lg-6 col-sm-12">
+                    <b>Телефон<a>+7 919 837-66-24</a></b>
+                </div>
+                <div class="col col-4 col-lg-6 footer-mb-col-6 col-sm-12">
+                    <b>Email<a> ba.consalting@yandex.ru</a></b>
+                </div>
+                <div class="col col-4 col-lg-6 col-sm-12">
+                    <b>Мы в мессенджерах</b>
+                    <div class="footer-social">
+                        <a href=""><img src="./img/icon-2.svg" alt="" class="footer-sochial-icon"></a>                            
+                        <a href=""><img src="./img/icon-1.svg" alt="" class="footer-sochial-icon"></a>
+                        <a href=""><img src="./img/icon-3.svg" alt="" class="footer-sochial-icon"></a>
+                    </div>
+                </div>
+                <div class="col col-12 footer-mb-col-12" style="order: 100;">
+                    <div style="width: 100%; border-bottom: 1px solid #FFFFFF8E"></div>
+                </div>
+            </div>
+            <div class="row footer-form" style="flex-wrap: wrap;">
+                <div class="col col-12">
+                <b>Оставьте заявку на бесплатную консультцию</b>
+                </div>
+                <div class="col col-3 col-lg-4 col-md-6 col-sm-12">
+                    <input type="text" placeholder="Серге I" class="form-garant-input form-garant-input-2 form-garant-input-user form-garant-input-user-2"> 
+                </div>
+                <div class="col col-3 col-lg-4 col-md-6 col-sm-12">
+                    <input type="tel" placeholder="Ваш телефон" class="form-garant-input form-garant-input-2 form-garant-input-password form-garant-input-password-2">
+                </div>
+                <div class="col col-3 col-lg-4 col-md-12 ">
+                    <button class="form-garant-button">Оставить заявку</button>
+                </div>
+            </div>
+            <div class="row footer-address">
+                <div class="col col-12">
+                    <address>
+                        <span>Адрес компании:</span>
+                        <ul>
+                            <li>410056, Саратовская область, г. Саратов, ул. им. Вавилова Н. И., д. 8/26А </li>
+                            <li>Режим работы:</li>
+                            <li>Понедельник-пятница: 9:00-18:00 (Мск)</li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-2">
+        <div class="container">
+            <!-- <div class="home-info-row home-info-row-2">
+                <div class="home-info-text col-65-header">
+                    <h1>Банковская гарантия участникам<br> закупок 44-Ф3, 223-Ф3, 615-ПП.<br> Коммерческие гарантии.<br> Независимые гарантии</h1>
+                    <ul>
+                        <li>Сумма гарантии - до 500 млн.руб</li>
+                        <li>Срок гарантии до 7 лет</li>
+                        <li>Оформление онлайн с использование ЭДО</li>
+                        <li>Без посещения офиса банка</li>
+                    </ul>
+                    <button>Оставить заявку</button>
+                </div>
+                <div class="home-info-img">
+                    <img src="./img/white-img.png" alt="">
+                </div>
+            </div> -->
+        </div>
+    
+    </div>
+
+             
+
+
+       
 
 
 
@@ -231,6 +730,27 @@
 
 
 
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Инициализация -->
+
+    <!-- Lightbox (если нужен) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- Скрипт Lightbox -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script> -->
+
+
+    <script src="./js/jq.js"></script>
     <script src="./main.js"></script>
+    <script src="./js/slider.js"></script>
 </body>
 </html>
